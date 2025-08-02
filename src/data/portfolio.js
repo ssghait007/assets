@@ -98,7 +98,9 @@ export const education = {
 
 export const skills = {
   cloud: ["AWS", "GCP", "Azure"],
-  backend: ["Python", "Golang", "VueJS", "Javascript", "Node.js"],
+  backend: ["Python", "Golang", "Node.js"],
+  frontend: ["VueJS", "React", "Javascript"],
+  frameworks: ["Nuxt"],
   databases: ["Postgres", "DynamoDB", "Bigquery"],
   devops: ["Git", "CICD"],
   tools: ["JIRA"],

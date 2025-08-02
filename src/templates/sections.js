@@ -157,11 +157,27 @@ export const skillsSection = (skills) => `
                 </div>
             `).join('')}
             
+            ${skills.frontend.map(skill => `
+                <div class="tool-card">
+                    <i class="fas fa-laptop-code tool-icon"></i>
+                    <h3>${skill}</h3>
+                    <p class="tool-category">Frontend</p>
+                </div>
+            `).join('')}
+            
             ${skills.cloud.map(skill => `
                 <div class="tool-card">
                     <i class="fas fa-cloud tool-icon"></i>
                     <h3>${skill}</h3>
                     <p class="tool-category">Cloud</p>
+                </div>
+            `).join('')}
+            
+            ${skills.frameworks.map(skill => `
+                <div class="tool-card">
+                    <i class="fas fa-layer-group tool-icon"></i>
+                    <h3>${skill}</h3>
+                    <p class="tool-category">Framework</p>
                 </div>
             `).join('')}
             
