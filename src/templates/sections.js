@@ -207,10 +207,18 @@ export const contactSection = (personal) => `
             <p>Interested in collaborating on a project or have a question? I'm always open to discussing new opportunities and ideas.</p>
 
             <div class="social-links">
-                <a href="https://${personal.github}" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://${personal.linkedin}" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://${personal.website}" class="social-link"><i class="fas fa-globe"></i></a>
-                <a href="mailto:${personal.email}" class="social-link"><i class="fas fa-envelope"></i></a>
+                <a href="https://${personal.github}" class="social-link">
+                    <img src="github-svgrepo-com.svg" alt="GitHub" class="social-icon">
+                </a>
+                <a href="https://${personal.linkedin}" class="social-link">
+                    <img src="linkedin-svgrepo-com.svg" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://instagram.com/ssghait007" class="social-link">
+                    <img src="instagram-1-svgrepo-com.svg" alt="Instagram" class="social-icon">
+                </a>
+                <a href="mailto:${personal.email}" class="social-link">
+                    <img src="gmail-svgrepo-com.svg" alt="Email" class="social-icon">
+                </a>
             </div>
 
             <a href="mailto:${personal.email}" class="btn btn-primary">Send Email</a>

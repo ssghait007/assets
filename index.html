@@ -12,6 +12,7 @@
         
         
         
+        
         * {
             margin: 0;
             padding: 0;
@@ -556,6 +557,17 @@
             border-color: #6d28d9;
         }
 
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            filter: brightness(0) invert(1);
+            transition: filter 0.3s ease;
+        }
+
+        .social-link:hover .social-icon {
+            filter: brightness(0) invert(1);
+        }
+
         /* Footer */
         .footer {
             background-color: #0a0a0a;
@@ -685,6 +697,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+    
     
     
     
@@ -1003,10 +1016,18 @@
             <p>Interested in collaborating on a project or have a question? I'm always open to discussing new opportunities and ideas.</p>
 
             <div class="social-links">
-                <a href="https://github.com/ssghait007" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/sachin-ghait-02977794" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://onthegoalways.com" class="social-link"><i class="fas fa-globe"></i></a>
-                <a href="mailto:ssghait.007@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/ssghait007" class="social-link">
+                    <img src="github-svgrepo-com.svg" alt="GitHub" class="social-icon">
+                </a>
+                <a href="https://linkedin.com/in/sachin-ghait-02977794" class="social-link">
+                    <img src="linkedin-svgrepo-com.svg" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://instagram.com/ssghait007" class="social-link">
+                    <img src="instagram-1-svgrepo-com.svg" alt="Instagram" class="social-icon">
+                </a>
+                <a href="mailto:ssghait.007@gmail.com" class="social-link">
+                    <img src="gmail-svgrepo-com.svg" alt="Email" class="social-icon">
+                </a>
             </div>
 
             <a href="mailto:ssghait.007@gmail.com" class="btn btn-primary">Send Email</a>
