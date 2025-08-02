@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Data-driven portfolio website with modern build system",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && python3 -m http.server 8000",
+    "preview": "python3 -m http.server 8000",
+    "deploy": "npm run build && netlify deploy --prod"
+  },
+  "keywords": ["portfolio", "website", "template-literals", "es-modules"],
+  "author": "Sachin Ghait",
+  "license": "MIT"
+}
