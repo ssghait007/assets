@@ -25,6 +25,9 @@ export const navSection = (personal) => `
             <a href="#tools">Tech Stack</a>
             <a href="#contact">Contact</a>
         </div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+        </button>
     </nav>
 `;
 
@@ -208,16 +211,16 @@ export const contactSection = (personal) => `
 
             <div class="social-links">
                 <a href="https://${personal.github}" class="social-link">
-                    <img src="github-svgrepo-com.svg" alt="GitHub" class="social-icon">
+                    <img src="assets/icons/github-svgrepo-com.svg" alt="GitHub" class="social-icon">
                 </a>
                 <a href="https://${personal.linkedin}" class="social-link">
-                    <img src="linkedin-svgrepo-com.svg" alt="LinkedIn" class="social-icon">
+                    <img src="assets/icons/linkedin-svgrepo-com.svg" alt="LinkedIn" class="social-icon">
                 </a>
                 <a href="https://instagram.com/ssghait007" class="social-link">
-                    <img src="instagram-1-svgrepo-com.svg" alt="Instagram" class="social-icon">
+                    <img src="assets/icons/instagram-1-svgrepo-com.svg" alt="Instagram" class="social-icon">
                 </a>
                 <a href="mailto:${personal.email}" class="social-link">
-                    <img src="gmail-svgrepo-com.svg" alt="Email" class="social-icon">
+                    <img src="assets/icons/gmail-svgrepo-com.svg" alt="Email" class="social-icon">
                 </a>
             </div>
 

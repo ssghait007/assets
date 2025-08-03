@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,25 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         * {
             margin: 0;
             padding: 0;
@@ -124,6 +134,7 @@
             align-items: center;
             justify-content: center;
             font-size: 20px;
+            color: var(--text-primary);
             transition: all 0.3s ease;
             order: 2;
         }
@@ -589,8 +600,8 @@
             position: relative;
             cursor: pointer;
             transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateY(30px);
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .timeline-item:hover {
@@ -1021,7 +1032,7 @@
             50% { transform: scale(1.05); }
         }
 
-        /* Animation classes with initial hidden state */
+        /* Animation classes with initial visible state */
         section:not(.hero),
         .section-title,
         .project-card,
@@ -1029,8 +1040,9 @@
         .about-content,
         .contact-form,
         .social-links {
-            opacity: 0;
-            transform: translateY(30px);
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.6s ease;
         }
 
         /* Hero section should be visible immediately */
@@ -1279,7 +1291,7 @@
             :root {
                 --border-color: rgba(255, 255, 255, 0.3);
             }
-            
+
             [data-theme="light"] {
                 --border-color: rgba(0, 0, 0, 0.3);
             }
@@ -1293,60 +1305,58 @@
             .theme-toggle {
                 display: none !important;
             }
-            
+
             body {
                 background: white !important;
                 color: black !important;
             }
-            
+
             section {
                 page-break-inside: avoid;
                 padding: 20px 0;
             }
         }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     </style>
 </head>
 <body>
-    <!-- Skip to main content link for accessibility -->
-    <a href="#main" class="skip-link">Skip to main content</a>
+    
         
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <a href="#home" class="logo" aria-label="Sachin Ghait - Home">Sachin <span>Ghait</span></a>
-        
-        <!-- Theme Toggle -->
-        <button class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
-            <span class="theme-icon">🌙</span>
-        </button>
-        
-        <!-- Mobile Menu Button -->
-        <button class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
-        </button>
-        
-        <div class="nav-links" role="menubar">
-            <a href="#home" role="menuitem">Home</a>
-            <a href="#about" role="menuitem">About</a>
-            <a href="#projects" role="menuitem">Projects</a>
-            <a href="#experience" role="menuitem">Experience</a>
-            <a href="#tools" role="menuitem">Tech Stack</a>
-            <a href="#contact" role="menuitem">Contact</a>
+    <nav class="navbar">
+        <a href="#home" class="logo">Sachin <span>Ghait</span></a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#tools">Tech Stack</a>
+            <a href="#contact">Contact</a>
         </div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+        </button>
     </nav>
 
         
-    <main id="main">
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-subtitle">Senior Software Engineer</div>
@@ -1641,52 +1651,26 @@
         <div class="contact-content">
             <p>Interested in collaborating on a project or have a question? I'm always open to discussing new opportunities and ideas.</p>
 
-            <form class="contact-form" id="contactForm" aria-label="Contact form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required aria-required="true">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required aria-required="true">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject *</label>
-                    <input type="text" id="subject" name="subject" required aria-required="true">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" placeholder="Tell me about your project or idea..." required aria-required="true"></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-
             <div class="social-links">
-                <a href="https://github.com/ssghait007" class="social-link" aria-label="GitHub Profile">
-                    <img src="github-svgrepo-com.svg" alt="GitHub" class="social-icon">
+                <a href="https://github.com/ssghait007" class="social-link">
+                    <img src="assets/icons/github-svgrepo-com.svg" alt="GitHub" class="social-icon">
                 </a>
-                <a href="https://linkedin.com/in/sachin-ghait-02977794" class="social-link" aria-label="LinkedIn Profile">
-                    <img src="linkedin-svgrepo-com.svg" alt="LinkedIn" class="social-icon">
+                <a href="https://linkedin.com/in/sachin-ghait-02977794" class="social-link">
+                    <img src="assets/icons/linkedin-svgrepo-com.svg" alt="LinkedIn" class="social-icon">
                 </a>
-                <a href="https://instagram.com/ssghait007" class="social-link" aria-label="Instagram Profile">
-                    <img src="instagram-1-svgrepo-com.svg" alt="Instagram" class="social-icon">
+                <a href="https://instagram.com/ssghait007" class="social-link">
+                    <img src="assets/icons/instagram-1-svgrepo-com.svg" alt="Instagram" class="social-icon">
                 </a>
-                <a href="mailto:ssghait.007@gmail.com" class="social-link" aria-label="Send Email">
-                    <img src="gmail-svgrepo-com.svg" alt="Email" class="social-icon">
+                <a href="mailto:ssghait.007@gmail.com" class="social-link">
+                    <img src="assets/icons/gmail-svgrepo-com.svg" alt="Email" class="social-icon">
                 </a>
             </div>
+
+            <a href="mailto:ssghait.007@gmail.com" class="btn btn-primary">Send Email</a>
         </div>
     </section>
-    </main>
 
         
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        ↑
-    </button>
-
     <footer class="footer">
         <p>Designed & Built by Sachin Ghait • Crafted with ❤️ for performance and accessibility</p>
     </footer>
@@ -1694,423 +1678,92 @@
     
 
     <script>
-        // Theme Management
-        class ThemeManager {
-            constructor() {
-                this.theme = localStorage.getItem('theme') || 'dark';
-                this.themeToggle = document.querySelector('.theme-toggle');
-                this.init();
-            }
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
 
-            init() {
-                this.setTheme(this.theme);
-                this.themeToggle.addEventListener('click', () => this.toggleTheme());
-            }
-
-            setTheme(theme) {
-                this.theme = theme;
-                document.documentElement.setAttribute('data-theme', theme);
-                localStorage.setItem('theme', theme);
-                this.updateThemeIcon();
-            }
-
-            toggleTheme() {
-                const newTheme = this.theme === 'dark' ? 'light' : 'dark';
-                this.setTheme(newTheme);
-            }
-
-            updateThemeIcon() {
-                const icon = this.themeToggle.querySelector('.theme-icon');
-                icon.textContent = this.theme === 'dark' ? '🌙' : '☀️';
-            }
-        }
-
-        // Mobile Navigation
-        class MobileNav {
-            constructor() {
-                this.menuBtn = document.querySelector('.mobile-menu-btn');
-                this.navLinks = document.querySelector('.nav-links');
-                this.links = document.querySelectorAll('.nav-links a');
-                this.init();
-            }
-
-            init() {
-                this.menuBtn.addEventListener('click', () => this.toggleMenu());
-                this.links.forEach(link => {
-                    link.addEventListener('click', () => this.closeMenu());
-                });
-            }
-
-            toggleMenu() {
-                const isActive = this.menuBtn.classList.contains('active');
-                this.menuBtn.classList.toggle('active');
-                this.navLinks.classList.toggle('active');
-                this.menuBtn.setAttribute('aria-expanded', !isActive);
-            }
-
-            closeMenu() {
-                this.menuBtn.classList.remove('active');
-                this.navLinks.classList.remove('active');
-                this.menuBtn.setAttribute('aria-expanded', 'false');
-            }
-        }
-
-        // Enhanced Scroll Animations
-        class ScrollAnimations {
-            constructor() {
-                this.observerOptions = {
-                    threshold: 0.5,
-                    rootMargin: '0px 0px -100px 0px'
-                };
-                this.cardObserverOptions = {
-                    threshold: 0.3,
-                    rootMargin: '0px 0px -50px 0px'
-                };
-                this.timelineObserverOptions = {
-                    threshold: 0.2,
-                    rootMargin: '0px 0px -100px 0px'
-                };
-                this.init();
-            }
-
-            init() {
-                this.createObserver();
-                this.observeElements();
-            }
-
-            createObserver() {
-                // Observer for sections (50% threshold)
-                this.sectionObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            this.animateElement(entry.target);
-                            this.sectionObserver.unobserve(entry.target);
-                        }
-                    });
-                }, this.observerOptions);
-
-                // Observer for cards (30% threshold)
-                this.cardObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            this.animateElement(entry.target);
-                            this.cardObserver.unobserve(entry.target);
-                        }
-                    });
-                }, this.cardObserverOptions);
-
-                // Observer specifically for timeline items (20% threshold)
-                this.timelineObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            console.log('Timeline item intersecting:', entry.target);
-                            this.animateElement(entry.target);
-                            this.timelineObserver.unobserve(entry.target);
-                        }
-                    });
-                }, this.timelineObserverOptions);
-            }
-
-            observeElements() {
-                // Observe sections with 50% threshold (exclude hero)
-                document.querySelectorAll('section:not(.hero)').forEach((section, index) => {
-                    section.style.animationDelay = `${index * 0.15}s`;
-                    this.sectionObserver.observe(section);
-                });
-
-                // Observe section titles separately for better timing
-                document.querySelectorAll('.section-title').forEach((title, index) => {
-                    title.style.animationDelay = `${index * 0.2}s`;
-                    this.sectionObserver.observe(title);
-                });
-
-                // Observe cards with 30% threshold for earlier animation
-                document.querySelectorAll('.project-card').forEach((card, index) => {
-                    card.style.animationDelay = `${index * 0.1}s`;
-                    this.cardObserver.observe(card);
-                });
-
-                document.querySelectorAll('.tool-card').forEach((card, index) => {
-                    card.style.animationDelay = `${index * 0.05}s`;
-                    this.cardObserver.observe(card);
-                });
-
-                document.querySelectorAll('.timeline-item').forEach((item, index) => {
-                    item.style.animationDelay = `${index * 0.15}s`;
-                    // Use dedicated timeline observer
-                    this.timelineObserver.observe(item);
-                });
-
-                // Observe other elements
-                document.querySelectorAll('.about-content, .contact-form, .social-links').forEach((el, index) => {
-                    el.style.animationDelay = `${index * 0.1}s`;
-                    this.cardObserver.observe(el);
-                });
-            }
-
-            animateElement(element) {
-                if (element.matches('section')) {
-                    element.classList.add('fade-in');
-                } else if (element.matches('.section-title')) {
-                    element.classList.add('slide-in-left');
-                } else if (element.matches('.project-card, .tool-card')) {
-                    element.classList.add('scale-in');
-                } else if (element.matches('.timeline-item')) {
-                    const timelineItems = Array.from(element.parentNode.children).filter(child => child.classList.contains('timeline-item'));
-                    const index = timelineItems.indexOf(element);
-                    const isEven = index % 2 === 0;
-                    element.classList.add(isEven ? 'slide-in-left' : 'slide-in-right');
-                } else if (element.matches('.about-content')) {
-                    element.classList.add('slide-in-right');
-                } else if (element.matches('.contact-form')) {
-                    element.classList.add('fade-in');
-                } else if (element.matches('.social-links')) {
-                    element.classList.add('scale-in');
-                } else {
-                    element.classList.add('fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
                 }
-            }
-        }
+            });
+        }, observerOptions);
 
-        // Contact Form Handler
-        class ContactForm {
-            constructor() {
-                this.form = document.getElementById('contactForm');
-                this.submitBtn = this.form.querySelector('.submit-btn');
-                this.originalBtnText = this.submitBtn.textContent;
-                this.init();
-            }
+        // Observe sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
 
-            init() {
-                this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-            }
-
-            async handleSubmit(e) {
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
-                const formData = new FormData(this.form);
-                const data = Object.fromEntries(formData);
-                
-                this.setSubmitting(true);
-                
-                try {
-                    // Simulate form submission (replace with actual endpoint)
-                    await this.simulateSubmission(data);
-                    this.showSuccess();
-                    this.form.reset();
-                } catch (error) {
-                    this.showError();
-                } finally {
-                    this.setSubmitting(false);
-                }
-            }
-
-            async simulateSubmission(data) {
-                // Replace this with actual form submission logic
-                return new Promise((resolve) => {
-                    setTimeout(() => {
-                        console.log('Form data:', data);
-                        resolve();
-                    }, 2000);
-                });
-            }
-
-            setSubmitting(isSubmitting) {
-                this.submitBtn.disabled = isSubmitting;
-                this.submitBtn.textContent = isSubmitting ? 'Sending...' : this.originalBtnText;
-                this.submitBtn.style.opacity = isSubmitting ? '0.7' : '1';
-            }
-
-            showSuccess() {
-                this.showMessage('Message sent successfully! I\'ll get back to you soon.', 'success');
-            }
-
-            showError() {
-                this.showMessage('Failed to send message. Please try again or email me directly.', 'error');
-            }
-
-            showMessage(text, type) {
-                // Create and show notification (you can enhance this with a proper notification system)
-                const notification = document.createElement('div');
-                notification.textContent = text;
-                notification.style.cssText = `
-                    position: fixed;
-                    top: 20px;
-                    right: 20px;
-                    padding: 15px 20px;
-                    border-radius: 8px;
-                    color: white;
-                    font-weight: 500;
-                    z-index: 1000;
-                    animation: slideInFromRight 0.3s ease;
-                    background-color: ${type === 'success' ? '#10b981' : '#ef4444'};
-                `;
-                
-                document.body.appendChild(notification);
-                
-                setTimeout(() => {
-                    notification.remove();
-                }, 5000);
-            }
-        }
-
-        // Navigation and Scroll Management
-        class NavigationManager {
-            constructor() {
-                this.navbar = document.querySelector('.navbar');
-                this.sections = document.querySelectorAll('section');
-                this.navLinks = document.querySelectorAll('.nav-links a');
-                this.backToTopBtn = document.getElementById('backToTop');
-                this.init();
-            }
-
-            init() {
-                this.setupSmoothScrolling();
-                this.setupScrollEffects();
-                this.setupBackToTop();
-            }
-
-            setupSmoothScrolling() {
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const target = document.querySelector(anchor.getAttribute('href'));
-                        if (target) {
-                            window.scrollTo({
-                                top: target.offsetTop - 80,
-                                behavior: 'smooth'
-                            });
-                        }
-                    });
-                });
-            }
-
-            setupScrollEffects() {
-                let ticking = false;
-                
-                window.addEventListener('scroll', () => {
-                    if (!ticking) {
-                        requestAnimationFrame(() => {
-                            this.updateNavbar();
-                            this.updateActiveNavLink();
-                            this.updateBackToTop();
-                            ticking = false;
-                        });
-                        ticking = true;
-                    }
-                });
-            }
-
-            updateNavbar() {
-                const scrolled = window.scrollY > 50;
-                this.navbar.classList.toggle('scrolled', scrolled);
-            }
-
-            updateActiveNavLink() {
-                let current = '';
-                this.sections.forEach(section => {
-                    const sectionTop = section.offsetTop - 100;
-                    if (window.pageYOffset >= sectionTop) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                this.navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-
-            updateBackToTop() {
-                const scrolled = window.scrollY > 300;
-                this.backToTopBtn.classList.toggle('visible', scrolled);
-            }
-
-            setupBackToTop() {
-                this.backToTopBtn.addEventListener('click', () => {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
                     window.scrollTo({
-                        top: 0,
+                        top: target.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                });
-            }
-        }
-
-        // Performance Optimization
-        class PerformanceOptimizer {
-            constructor() {
-                this.init();
-            }
-
-            init() {
-                this.setupLazyLoading();
-                this.preloadCriticalResources();
-            }
-
-            setupLazyLoading() {
-                // Lazy load images
-                const images = document.querySelectorAll('img[src]');
-                const imageObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            img.style.opacity = '0';
-                            img.style.transition = 'opacity 0.3s ease';
-                            
-                            const tempImg = new Image();
-                            tempImg.onload = () => {
-                                img.style.opacity = '1';
-                            };
-                            tempImg.src = img.src;
-                            
-                            imageObserver.unobserve(img);
-                        }
-                    });
-                });
-                
-                images.forEach(img => imageObserver.observe(img));
-            }
-
-            preloadCriticalResources() {
-                // Preload critical fonts and assets
-                const link = document.createElement('link');
-                link.rel = 'preload';
-                link.as = 'font';
-                link.type = 'font/woff2';
-                link.crossOrigin = 'anonymous';
-                link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
-                document.head.appendChild(link);
-            }
-        }
-
-        // Initialize all components when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            new ThemeManager();
-            new MobileNav();
-            new ScrollAnimations();
-            new ContactForm();
-            new NavigationManager();
-            new PerformanceOptimizer();
-            
-            // Debug: Log timeline items
-            console.log('Timeline items found:', document.querySelectorAll('.timeline-item').length);
-        });
-
-        // Handle keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                // Close mobile menu on escape
-                const mobileNav = document.querySelector('.nav-links');
-                const menuBtn = document.querySelector('.mobile-menu-btn');
-                if (mobileNav.classList.contains('active')) {
-                    mobileNav.classList.remove('active');
-                    menuBtn.classList.remove('active');
-                    menuBtn.setAttribute('aria-expanded', 'false');
                 }
-            }
+            });
         });
+
+        // Navigation active state
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Theme toggle functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Check for saved theme preference or default to 'dark'
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        
+        // Update icon based on current theme
+        function updateThemeIcon(theme) {
+            if (theme === 'light') {
+                themeIcon.className = 'fas fa-moon';
+            } else {
+                themeIcon.className = 'fas fa-sun';
+            }
+        }
+        
+        updateThemeIcon(currentTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+    
     </script>
 </body>
 </html>
