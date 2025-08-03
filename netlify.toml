@@ -1,10 +1,10 @@
 [build]
   # Build command to run
   command = "npm run build"
-  
+
   # Directory to publish (the generated files)
   publish = "."
-  
+
   # Node.js version for build environment
   [build.environment]
     NODE_VERSION = "18"

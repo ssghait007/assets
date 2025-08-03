@@ -26,7 +26,7 @@ export const navSection = (personal) => `
             <a href="#contact">Contact</a>
         </div>
         <button class="theme-toggle" aria-label="Toggle theme">
-            <i class="fas fa-sun"></i>
+            <span class="theme-icon">☀</span>
         </button>
     </nav>
 `;
@@ -68,8 +68,8 @@ export const projectsSection = (projects, skills) => `
                         <span class="tech-tag">GCP</span>
                     </div>
                     <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Case Study</a>
-                        <a href="${projects.length > 0 ? '#' : '#'}"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#"><span class="link-icon">↗</span> Case Study</a>
+                        <a href="${projects.length > 0 ? '#' : '#'}"><span class="link-icon">⚡</span> GitHub</a>
                     </div>
                 </div>
             </div>
@@ -86,8 +86,8 @@ export const projectsSection = (projects, skills) => `
                         <span class="tech-tag">Lambda</span>
                     </div>
                     <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        <a href="#"><i class="fab fa-github"></i> Repository</a>
+                        <a href="#"><span class="link-icon">↗</span> Demo</a>
+                        <a href="#"><span class="link-icon">⚡</span> Repository</a>
                     </div>
                 </div>
             </div>
@@ -104,8 +104,8 @@ export const projectsSection = (projects, skills) => `
                         <span class="tech-tag">Postgres</span>
                     </div>
                     <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Architecture</a>
-                        <a href="#"><i class="fab fa-github"></i> Codebase</a>
+                        <a href="#"><span class="link-icon">↗</span> Architecture</a>
+                        <a href="#"><span class="link-icon">⚡</span> Codebase</a>
                     </div>
                 </div>
             </div>
@@ -120,8 +120,8 @@ export const projectsSection = (projects, skills) => `
                             ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                         </div>
                         <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><span class="link-icon">↗</span> Demo</a>
+                            <a href="#"><span class="link-icon">⚡</span> Code</a>
                         </div>
                     </div>
                 </div>
@@ -154,47 +154,47 @@ export const skillsSection = (skills) => `
         <div class="tools-grid">
             ${skills.backend.map(skill => `
                 <div class="tool-card">
-                    <i class="fas fa-code tool-icon"></i>
+                    <span class="tool-icon">💻</span>
                     <h3>${skill}</h3>
                     <p class="tool-category">Backend</p>
                 </div>
             `).join('')}
-            
+
             ${skills.frontend.map(skill => `
                 <div class="tool-card">
-                    <i class="fas fa-laptop-code tool-icon"></i>
+                    <span class="tool-icon">🎨</span>
                     <h3>${skill}</h3>
                     <p class="tool-category">Frontend</p>
                 </div>
             `).join('')}
-            
+
             ${skills.cloud.map(skill => `
                 <div class="tool-card">
-                    <i class="fas fa-cloud tool-icon"></i>
+                    <span class="tool-icon">☁️</span>
                     <h3>${skill}</h3>
                     <p class="tool-category">Cloud</p>
                 </div>
             `).join('')}
-            
+
             ${skills.frameworks.map(skill => `
                 <div class="tool-card">
-                    <i class="fas fa-layer-group tool-icon"></i>
+                    <span class="tool-icon">🔧</span>
                     <h3>${skill}</h3>
                     <p class="tool-category">Framework</p>
                 </div>
             `).join('')}
-            
+
             ${skills.databases.map(skill => `
                 <div class="tool-card">
-                    <i class="fas fa-database tool-icon"></i>
+                    <span class="tool-icon">🗄️</span>
                     <h3>${skill}</h3>
                     <p class="tool-category">Database</p>
                 </div>
             `).join('')}
-            
+
             ${skills.devops.map(skill => `
                 <div class="tool-card">
-                    <i class="fas fa-cogs tool-icon"></i>
+                    <span class="tool-icon">⚙️</span>
                     <h3>${skill}</h3>
                     <p class="tool-category">DevOps</p>
                 </div>

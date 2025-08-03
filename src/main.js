@@ -1,14 +1,14 @@
 // Main application file - renders templates with data
 import { personal, experience, education, skills, projects, achievements, languages, interests } from './data/portfolio.js';
-import { 
-    navSection, 
-    heroSection, 
-    aboutSection, 
-    projectsSection, 
-    experienceSection, 
-    skillsSection, 
-    contactSection, 
-    footerSection 
+import {
+    navSection,
+    heroSection,
+    aboutSection,
+    projectsSection,
+    experienceSection,
+    skillsSection,
+    contactSection,
+    footerSection
 } from './templates/sections.js';
 
 // Generate complete HTML content
@@ -23,7 +23,7 @@ export function generateHTML() {
         ${contactSection(personal)}
         ${footerSection(personal)}
     `;
-    
+
     return bodyContent;
 }
 
@@ -89,27 +89,27 @@ export function generateJS() {
 
         // Theme toggle functionality
         const themeToggle = document.querySelector('.theme-toggle');
-        const themeIcon = themeToggle.querySelector('i');
-        
+        const themeIcon = themeToggle.querySelector('.theme-icon');
+
         // Check for saved theme preference or default to 'dark'
         const currentTheme = localStorage.getItem('theme') || 'dark';
         document.documentElement.setAttribute('data-theme', currentTheme);
-        
+
         // Update icon based on current theme
         function updateThemeIcon(theme) {
             if (theme === 'light') {
-                themeIcon.className = 'fas fa-moon';
+                themeIcon.textContent = '🌙';
             } else {
-                themeIcon.className = 'fas fa-sun';
+                themeIcon.textContent = '☀';
             }
         }
-        
+
         updateThemeIcon(currentTheme);
-        
+
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
+
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
